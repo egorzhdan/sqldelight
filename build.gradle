@@ -1,10 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
+  ext["INTERNAL__CHECKED_MINIMUM_PLUGIN_VERSIONS"] = ""
   apply from: "$rootDir/gradle/dependencies.gradle"
 
   repositories {
     mavenCentral()
+    mavenLocal()
     google()
     jcenter()
     gradlePluginPortal()
@@ -47,6 +49,7 @@ spotless {
 allprojects {
   repositories {
     mavenCentral()
+    mavenLocal()
     google()
     jcenter()
   }
